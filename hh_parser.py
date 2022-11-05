@@ -5,9 +5,6 @@ import pandas as pd
 import time
 import datetime
 from tqdm import tqdm
-from fake_useragent import UserAgent
-
-UserAgent().chrome
 
 class vac_parser:
     
