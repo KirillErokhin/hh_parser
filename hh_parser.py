@@ -139,7 +139,7 @@ class vac_parser:
         
     def save_collection(self, name:str):
         
-        df_collect = pd.read_csv(path + '/' + name + '.csv', index_col=0)
+        df_collect = pd.read_csv(self.path + '/' + name + '.csv', index_col=0)
 
         if df_collect.loc[len(df_collect)-1, 'date'] != datetime.date.today():
             df_collect.loc[len(df_collect), 'date'] = datetime.date.today()
