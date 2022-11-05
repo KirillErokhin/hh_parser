@@ -5,6 +5,9 @@ import pandas as pd
 import time
 import datetime
 from tqdm import tqdm
+from fake_useragent import UserAgent
+
+UserAgent().chrome
 
 class vac_parser:
     
@@ -37,7 +40,8 @@ class vac_parser:
             'area':'113',
             'per_page':'10', 
             'page':1, 
-            'responses_count_enabled': True
+            'responses_count_enabled': True,
+            
         }
         
         self.vacancies_info = requests.get(self.url, params=self.par).json()
@@ -103,6 +107,8 @@ class vac_parser:
             emp_url = vacancie['employer']['url']
             
             vac_info = requests.get(vac_url).json()
+            
+            time.sleep(.2)
             emp_info = requests.get(emp_url).json()
 
             vacancie_info = self.vacancie_parser(vac_info)
@@ -115,7 +121,7 @@ class vac_parser:
 
             self.data.loc[len(self.data)] = vacancie_info
 
-        time.sleep(.1)
+        time.sleep(.2)
         
     def start_final_parse(self):
         
