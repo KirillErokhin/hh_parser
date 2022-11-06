@@ -152,4 +152,4 @@ class vac_parser:
         
         print('Информация о сегодня сохранена')
         display(df_collect.tail())
-        self.data.to_csv(self.path + '/' + name + '.csv')
+        df_collect.to_csv(self.path + '/' + name + '.csv')
