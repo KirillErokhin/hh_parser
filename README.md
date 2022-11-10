@@ -1,5 +1,7 @@
 # Исследование вакансий HeadHunter.ru по запросу "data python"
 
+![Количество вакансий по городам](https://github.com/KirillErokhin/hh_parser/blob/main/img/rus_vac.jpg)
+
 Поиск вакансий и отклики на данный момент одна из самый сложных заданий для начинающих специалистов в области инженерии данных. Данное исследование должно помочь определить будущему специалисту узнать о рынке вакансий, в частности:
 - количество вакансий по их типу/городу/грейду/опыту
 - самые популярные вакансии
@@ -7,21 +9,31 @@
 - основные необходимые навыки (key skills)
 - компенсации труда
 
+Ссылки на файлы:
+
+* [Тетрадка с предобработкой и исследованием, а так же дополнительными графиками](https://github.com/KirillErokhin/hh_parser/blob/main/hh_dp_EDA.ipynb)
+* [Скрипт для парсинга](https://github.com/KirillErokhin/hh_parser/blob/main/hh_parser.py)
+* [Выгруженный датасет](https://github.com/KirillErokhin/hh_parser/blob/main/data_python.csv)
+
+Дата выгрузки датасета - **09.11.2022**
+
 ## Основной стек:
 - pandas
 - numpy
 - seaborn
 - matplotlib
 
-## Итог исследования 
+## Статус проекта
 
-Самые популярные вакансии:
+**Завершен.**
 
-<div align="left">
-  <img src="https://github.com/KirillErokhin/hh_parser/blob/main/img/vacancies_count.jpg" title="Вакансии" alt="График" width="500" height="500"/>
-</div>
+## Итоги исследования 
 
-В итоге самыми популярными будут:
+Количество вакансии:
+
+![Количество вакансий](https://github.com/KirillErokhin/hh_parser/blob/main/img/vacancies_count.jpg)
+
+В итоге самыми популярными у работодателей будут:
 
 - data scientist
 - data engineer
@@ -30,29 +42,23 @@
 - analyst
 - devops
 
-Видно, что в сумме аналитики более востребованы, в отличии от инженеров данных и саентистов.
+В **сумме** аналитики и дата аналитики наиболее востребованы.
 
-Топ-6 включает в себя и devops, хотя и идет с большим отрывом от популярных вакансий.
+Топ-6 включает в себя и `devops`, хотя и идет с большим отрывом от популярных вакансий.
 
 ---
 
 Количество вакансий по городам:
 
-<div align="left">
-  <img src="https://github.com/KirillErokhin/hh_parser/blob/main/img/vacancies_cities.jpg" title="Распределение по городам" alt="График" width="600" height="500"/>
-</div>
+![Распределение по городам](https://github.com/KirillErokhin/hh_parser/blob/main/img/vacancies_cities.jpg)
 
 Большинство вакансий в столице - Москва. В 4 раза меньше в Санкт-Петербурге.
-
-И дальше идёт на убывание.
 
 ---
 
 Самые популярные вакансии в городах:
 
-<div align="left">
-  <img src="https://github.com/KirillErokhin/hh_parser/blob/main/img/pies_types_cities.jpg" title="Вакансии в городах" alt="График" width="800" height="1000"/>
-</div>
+![Вакансии в городах](https://github.com/KirillErokhin/hh_parser/blob/main/img/pies_types_cities.jpg)
 
 Как видно, в двух наиболее крупных городах лидерами по поиску разделяют четыре типа:
 
@@ -63,38 +69,126 @@
 
 Наиборлее популярные всё же data scientist'ы и инженеры данных.
 
-В остальных городах, где вакансий значительно меньше вакансий - разброс по требованию выше. Статистика слишком мала (до 40 вакансий), чтобы делать конечные выводы. Тренд сейчас идет на увеличение количества вакансий в стране, после чего можно будет сделать конечные выводы.
+В остальных городах, где вакансий значительно меньше - разброс по требованию выше.
 
 ---
 
-Популярные по грейдам и опыту:
+Востребованные по грейдам и опыту:
 
-<div align="left">
-  <img src="https://github.com/KirillErokhin/hh_parser/blob/main/img/grades_exp_count.jpg" title="По грейдам и опыту" alt="График" width="1000" height="500"/>
-</div>
+![По грейдам и опыту](https://github.com/KirillErokhin/hh_parser/blob/main/img/grades_exp_count.jpg)
+
+Как видно, для большинства компаний, наиболее востребованы кандидаты с грейдом `senior` и выше и опытом выше 1 года.
+
+Так же востребованы специалисты уровня `middle` и `lead`, скорее всего из-за сложившейся ситуации.
 
 ---
 
 Популярные грейды в городах:
 
-<div align="left">
-  <img src="https://github.com/KirillErokhin/hh_parser/blob/main/img/grades_cities_count.jpg" title="Грейды в городах" alt="График" width="800" height="1000"/>
-</div>
+![Грейды в городах](https://github.com/KirillErokhin/hh_parser/blob/main/img/grades_cities_count.jpg)
+
+Как видно из графиков, в `6` городах с наибольшим количеством вакансий чаще ищут именно специалистов уровня `senior` и `middle`.
 
 ---
 
 Количество отликов:
 
-<div align="left">
-  <img src="https://github.com/KirillErokhin/hh_parser/blob/main/img/responses_count.jpg" title="Отклики" alt="График" width="800" height="800"/>
-</div>
+![Отклики](https://github.com/KirillErokhin/hh_parser/blob/main/img/responses_count.jpg)
+
+Самые востребованные вакансии у соискателей:
+
+- data analyst
+- data scientist
+
+И соответсвенно, чаще откликаются на грейды `junior` и ниже с требуемым опытом работы от **1 года**.
 
 ---
 
-Востребование навыки:
+Ключевые навыки - они же `key skills`:
 
-<div align="left">
-  <img src="https://github.com/KirillErokhin/hh_parser/blob/main/img/ks_ru_en_count.jpg" title="Навыки" alt="График" width="1000" height="500"/>
-</div>
+![Навыки](https://github.com/KirillErokhin/hh_parser/blob/main/img/ks_ru_en_count.jpg)
+
+Самыми востребованными навыками для специалиста по данным будут `python` и `SQL`, так как это основной стек вакансий и **английский язык** с **мат. статистикой** (если не учитывать, что *навык анализ данных* это скорее общий навык для в профессии в целом).
+
+Чтобы понять основной стек определённого типа ваканский, стоит рассмотреть поближе для каждого типа:
+
+![Навыки по типам](https://github.com/KirillErokhin/hh_parser/blob/main/img/ks_types.jpg)
+
+Для самых востребованный вакансий можно выделить основной стек:
+
+- `Git`
+- `Spark`
+- `Hadoop`
+- `Linux`
+
+И далее отдельно для своей специфики уже появляются отличия.
+
+- Для **Data Scintist'а** - `Machine learning`.
+- Для **Data engineer'а** - `ETL`, `DWH` и язык `SCALA`.
+- Для **Programmer** - `ETL`, и языки `Java`, `C++`.
+- Для **Data analyst'а** - `PowerBI` и `MS Excel`.
 
 ---
+
+Проф области компаний с наибольшим количеством вакансий:
+
+![Проф области компаний](https://github.com/KirillErokhin/hh_parser/blob/main/img/ind_count.jpg)
+
+Наиболее востребованы специалисты в компаниях следующих проф. областей:
+
+- Банки
+- Разработка программного обеспечения
+- Интернет-компании
+
+---
+
+Компании с наибольшим количеством вакансий:
+
+![Компании с наибольшим количеством вакансий](https://github.com/KirillErokhin/hh_parser/blob/main/img/comp_count.jpg)
+
+Конечно, самое больше всего вакансий у **СБЕР**, так как одна из самых крупных компаний на рынке.
+
+---
+
+Как часто компании говорят о компенсации труда в вакансии:
+
+![ЗП/Всего](https://github.com/KirillErokhin/hh_parser/blob/main/img/c_sal.jpg)
+
+Всего **12%** компаний указывают заработную плату в вакансии.
+
+---
+
+Распределение зарплат по городам с наибольшими зарплатами:
+
+![ЗП по городам](https://github.com/KirillErokhin/hh_parser/blob/main/img/top_sal_city_f_t.jpg)
+
+Как видно из графиков, города с самой высокой зарплатой:
+
+- Иннополис
+- Москва
+- Екатеринбург
+- Казань
+- Санкт-Петербург
+
+---
+
+Заработные платы по типу вакансии и опыту работы:
+
+![ЗП по типам](https://github.com/KirillErokhin/hh_parser/blob/main/img/type_exp_sal.jpg)
+
+Cамые высокооплачиваемые вакансии:
+
+- **Data scientist**
+- **ML engeneer**
+
+В целом, компании готовы платить специалистам с опытом работы от 1 года более **150 тыс. руб** на данный момент.
+
+## Что будет улучшено
+
+Возможные доработки:
+
+- улучшение алгоритма обработки названия вакансии (для точного определения типа)
+- парсинг технологического стека из описания вакансии и дополнение к столбцу `key skills`
+- парсинг доп. сайтов/telegram с вакансиями
+- дополнительные графики и анализ
+
