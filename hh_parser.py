@@ -41,7 +41,7 @@ class vac_parser:
             
         }
         
-        self.vacancies_info = requests.get(self.url, params=self.par).json()
+        self.vacancies_info = requests.get(self.url, params=self.par, verify=False).json()
 
         self.num_pages = self.vacancies_info['pages']
         
@@ -101,12 +101,17 @@ class vac_parser:
         for i, vacancie in enumerate(page['items']):
 
             vac_url = vacancie['url']
-            emp_url = vacancie['employer']['url']
-            
-            vac_info = requests.get(vac_url).json()
+            try:
+                emp_url = vacancie['employer']['url']
+            except:
+                print(vac_url)
+                break
+                # emp_url = None
+                
+            vac_info = requests.get(vac_url, verify=False).json()
             
             time.sleep(.2)
-            emp_info = requests.get(emp_url).json()
+            emp_info = requests.get(emp_url, verify=False).json()
 
             vacancie_info = self.vacancie_parser(vac_info)
             try: 
@@ -132,7 +137,7 @@ class vac_parser:
                 'responses_count_enabled': True
             }
 
-            hh_page = requests.get(self.url, params=parameters).json()
+            hh_page = requests.get(self.url, params=parameters, verify=False).json()
 
             self.get_info_from_page(hh_page)
             
