@@ -106,7 +106,6 @@ class vac_parser:
             except:
                 print(vac_url)
                 break
-                # emp_url = None
                 
             vac_info = requests.get(vac_url, verify=False).json()
             
